@@ -17,14 +17,14 @@ import org.springframework.web.context.WebApplicationContext;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class AlunoControllerTest {
-	
+public class LancamentoAtividadeControllerTest {
+
 	@Autowired
 	private WebApplicationContext context;
 	
 	private MockMvc mvc;
 	
-	String url = "/alunos/59320492";
+	String url = "/lancAtividades/1";
 	
 	@Before
 	public void setup() {
@@ -35,7 +35,6 @@ public class AlunoControllerTest {
 	public void testeRequisicao() throws Exception {
 		this.mvc.perform(get(url))
 		.andExpect(status().isOk())
-		.andExpect(jsonPath("nome",equalTo("carlos eduardo")));
+		.andExpect(jsonPath("codigo",equalTo("1")));
 	}
-
 }

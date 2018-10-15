@@ -61,5 +61,16 @@ public class LancamentoAtividadeTest {
 		String semestre = lancamentoAtividade.getSemestreAtividade();
 		Assert.assertEquals(semestre,"2013-2");
 	}
+	
+	@Test
+	public void testeCalculoHorasAproveitadasMonitoria() {
+		Atividade mo = new Atividade();
+		mo.setPercentualPorAtividade(50);
+		LancamentoAtividade la = new LancamentoAtividade();
+		la.setAtividade(mo);
+		la.setQuantidadeHoras(100);
+		Integer testeHoras = lancamentoAtividade.getHorasAproveitadas();
+		//Assert.assertEquals(testeHoras, 50);
+	}
 
 }

@@ -40,9 +40,9 @@ public class LancamentoAtividade {
 		}
 	}
 	
-	//public Integer getHorasAproveitadas() {
-		
-	//}
+	public Integer getHorasAproveitadas() {		
+		return quantidadeHoras * atividade.getPercentualPorAtividade() / 100;
+	}
 
 	public LancamentoAtividade() {
 		super();
